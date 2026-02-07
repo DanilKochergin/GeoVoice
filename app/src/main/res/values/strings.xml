@@ -2,4 +2,5 @@
     <string name="app_name">GeoVoice</string>
     <string name="hellostr">Добро пожаловать в аудиогид по городу Салават</string>
     <string name="hellobtntext">Продолжить</string>
+    <string name="click_to_start_the_audio_guide">Нажмите чтобы запустить аудиогид/Click to start the audio guide/Аудио ҡулланманы башлау өсөн баҫығыҙ</string>
 </resources>

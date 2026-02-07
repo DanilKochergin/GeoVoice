@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GeoVoice">
         <activity
+            android:name=".places.SecondPlaceActivity"
+            android:exported="false" />
+        <activity
             android:name=".places.FirstPlaceActivity"
             android:exported="false" />
         <activity
