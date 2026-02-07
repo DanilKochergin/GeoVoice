@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GeoVoice</string>
+    <string name="hellostr">Добро пожаловать в аудиогид по городу Салават</string>
+    <string name="hellobtntext">Продолжить</string>
+</resources>

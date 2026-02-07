@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Primary -->
+    <color name="salavat_green_dark">#15573A</color>
+
+    <!-- Secondary -->
+    <color name="salavat_blue">#1E5FA3</color>
+
+    <!-- Accent -->
+    <color name="salavat_gold">#F2B705</color>
+
+    <!-- Neutrals -->
+    <color name="salavat_light_bg">#F4F6F8</color>
+
+    <!-- Dark -->
+    <color name="salavat_dark_surface">#1A1A1A</color>
+</resources>
