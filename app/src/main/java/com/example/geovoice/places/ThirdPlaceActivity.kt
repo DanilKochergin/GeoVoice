@@ -8,14 +8,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.geovoice.MainActivity
 import com.example.geovoice.R
-import com.example.geovoice.databinding.ActivityFirstPlaceBinding
+import com.example.geovoice.databinding.ActivityThirdPlaceBinding
 
-class FirstPlaceActivity : AppCompatActivity() {
-    lateinit var binding: ActivityFirstPlaceBinding
+class ThirdPlaceActivity : AppCompatActivity() {
+    lateinit var binding: ActivityThirdPlaceBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityFirstPlaceBinding.inflate(layoutInflater)
+        binding = ActivityThirdPlaceBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
