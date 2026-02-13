@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HelloActivity"
-    android:background="@color/salavat_light_bg">
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/textView"
@@ -19,6 +19,7 @@
         android:text="@string/hellostr"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:textColor="@color/salavat_light_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
