@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".places.FirstPlaceActivity"
-    android:background="@color/salavat_light_bg">
+    android:background="@drawable/background">
 
     <Button
         android:id="@+id/backbtn"
@@ -17,7 +17,7 @@
         android:text="⬅"
         android:textSize="30sp"
         android:gravity="center"
-        android:backgroundTint="@color/salavat_blue"
+        android:backgroundTint="@color/salavat_green_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,6 +37,7 @@
     <TextView
         android:id="@+id/textView2"
         android:gravity="center"
+        android:textColor="@color/salavat_light_bg"
         android:visibility="visible"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

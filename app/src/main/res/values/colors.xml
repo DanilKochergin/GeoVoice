@@ -6,13 +6,13 @@
     <color name="salavat_green_dark">#15573A</color>
 
     <!-- Secondary -->
-    <color name="salavat_blue">#1E5FA3</color>
+    <color name="salavat_blue">#4A90E2</color>
 
     <!-- Accent -->
     <color name="salavat_gold">#F2B705</color>
 
     <!-- Neutrals -->
-    <color name="salavat_light_bg">#F4F6F8</color>
+    <color name="salavat_light_bg">#F5F5F5</color>
 
     <!-- Dark -->
     <color name="salavat_dark_surface">#1A1A1A</color>
