@@ -22,13 +22,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_width="295dp"
-        android:layout_height="426dp"
-        android:layout_marginTop="130dp"
+        android:layout_width="195dp"
+        android:layout_height="318dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/otechimg"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/backbtn" />
 
     <ImageButton
         android:id="@+id/ib"
@@ -45,19 +47,19 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:gravity="center"
-        android:textColor="@color/salavat_light_bg"
-        android:visibility="visible"
         android:layout_width="0dp"
-        android:layout_marginBottom="30dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
         android:text="@string/click_to_start_the_audio_guide"
+        android:textColor="@color/salavat_light_bg"
         android:textSize="25sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/ib"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 
