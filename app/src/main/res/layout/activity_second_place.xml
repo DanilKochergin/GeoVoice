@@ -20,6 +20,14 @@
         android:backgroundTint="@color/salavat_green_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="315dp"
+        android:layout_height="473dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/salulimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/ib"
