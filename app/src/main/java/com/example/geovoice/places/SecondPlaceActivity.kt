@@ -26,5 +26,10 @@ class SecondPlaceActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        binding.ib.setOnClickListener {
+            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
+            // mediaPlayer = MediaPlayer.create(this, R.raw.)
+            //mediaPlayer?.start()
+        }
     }
 }
