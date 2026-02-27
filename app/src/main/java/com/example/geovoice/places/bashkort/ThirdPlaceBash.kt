@@ -1,4 +1,4 @@
-package com.example.geovoice
+package com.example.geovoice.places.bashkort
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,36 +6,30 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.geovoice.databinding.HelloActivityBinding
-import com.example.geovoice.places.bashkort.MainActivityBash
-import com.example.geovoice.places.en.MainActivityEn
+import com.example.geovoice.R
+import com.example.geovoice.databinding.ActivityThirdPlaceBashBinding
 import com.example.geovoice.places.ru.MainActivityRu
 
-class HelloActivity : AppCompatActivity() {
-    lateinit var binding: HelloActivityBinding
+class ThirdPlaceBash : AppCompatActivity() {
+    lateinit var binding: ActivityThirdPlaceBashBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityThirdPlaceBashBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-        binding = HelloActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        binding.btnRu.setOnClickListener {
-            val intent = Intent(this, MainActivityRu::class.java)
-            startActivity(intent)
-        }
-        binding.btnEn.setOnClickListener {
-            val intent = Intent(this, MainActivityEn::class.java)
-            startActivity(intent)
-        }
-        binding.btnBash.setOnClickListener {
+        binding.backbtn.setOnClickListener {
             val intent = Intent(this, MainActivityBash::class.java)
             startActivity(intent)
         }
-
+        binding.ibRu.setOnClickListener {
+            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
+            // mediaPlayer = MediaPlayer.create(this, R.raw.)
+            //mediaPlayer?.start()
+        }
     }
 }

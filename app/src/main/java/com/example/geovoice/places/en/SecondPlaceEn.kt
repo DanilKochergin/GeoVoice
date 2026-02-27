@@ -1,4 +1,4 @@
-package com.example.geovoice.places
+package com.example.geovoice.places.en
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,16 +6,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.geovoice.MainActivity
 import com.example.geovoice.R
-import com.example.geovoice.databinding.ActivityFirstPlaceBinding
+import com.example.geovoice.databinding.ActivitySecondPlaceEnBinding
+import com.example.geovoice.places.ru.MainActivityRu
 
-class FirstPlaceActivity : AppCompatActivity() {
-    lateinit var binding: ActivityFirstPlaceBinding
+class SecondPlaceEn : AppCompatActivity() {
+    lateinit var binding: ActivitySecondPlaceEnBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivitySecondPlaceEnBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityFirstPlaceBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -23,7 +23,7 @@ class FirstPlaceActivity : AppCompatActivity() {
             insets
         }
         binding.backbtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivityEn::class.java)
             startActivity(intent)
         }
         binding.ib.setOnClickListener {

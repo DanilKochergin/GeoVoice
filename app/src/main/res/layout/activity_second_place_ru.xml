@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".places.FirstPlaceActivity"
+    tools:context=".places.ru.FirstPlaceActivityRu"
     android:background="@drawable/background">
 
     <Button
@@ -54,8 +54,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:text="@string/click_to_start_the_audio_guide"
-
+        android:text="@string/start_guide_ru"
         android:textColor="@color/salavat_light_bg"
         android:textSize="20sp"
         android:visibility="visible"
