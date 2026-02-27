@@ -1,23 +1,22 @@
-package com.example.geovoice.places
+package com.example.geovoice.places.en
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.geovoice.MainActivity
 import com.example.geovoice.R
-import com.example.geovoice.databinding.ActivityThirdPlaceBinding
+import com.example.geovoice.databinding.ActivityFirstPlaceEnBinding
+import com.example.geovoice.databinding.ActivityFirstPlaceRuBinding
+import com.example.geovoice.places.ru.MainActivityRu
 
-class ThirdPlaceActivity : AppCompatActivity() {
-    lateinit var binding: ActivityThirdPlaceBinding
-    private var mediaPlayer: MediaPlayer? = null
+class FirstPlaceEn : AppCompatActivity() {
+    lateinit var binding: ActivityFirstPlaceEnBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityFirstPlaceEnBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-        binding = ActivityThirdPlaceBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -25,7 +24,7 @@ class ThirdPlaceActivity : AppCompatActivity() {
             insets
         }
         binding.backbtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivityEn::class.java)
             startActivity(intent)
         }
         binding.ib.setOnClickListener {

@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".places.FirstPlaceActivity"
+    tools:context=".places.ru.FirstPlaceActivityRu"
     android:background="@drawable/background">
-
     <Button
         android:id="@+id/backbtn"
         android:layout_width="wrap_content"
@@ -22,11 +21,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_width="195dp"
-        android:layout_height="318dp"
+        android:layout_width="229dp"
+        android:layout_height="367dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/otechimg"
+        android:background="@drawable/katerimg"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,11 +50,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:text="@string/click_to_start_the_audio_guide"
+        android:text="@string/start_guide_bash"
         android:textColor="@color/salavat_light_bg"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/ib"
         app:layout_constraintEnd_toEndOf="parent"

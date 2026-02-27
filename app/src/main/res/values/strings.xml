@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">GeoVoice</string>
     <string name="hellostr">Добро пожаловать в аудиогид по городу Салават</string>
-    <string name="hellobtntext">Продолжить</string>
-    <string name="click_to_start_the_audio_guide">Нажмите чтобы запустить аудиогид/Click to start the audio guide/Аудио ҡулланманы башлау өсөн баҫығыҙ</string>
+    <string name="hellobtntext">Продолжить на Русском</string>
+    <string name="start_guide_en">Click to start the audio guide</string>
+    <string name="start_guide_ru">Нажмите чтобы запустить аудиогид</string>
+    <string name="start_guide_bash">Аудио ҡулланманы башлау өсөн баҫығыҙ</string>
+    <string name="bash_continue">Дауамы Башҡортса</string>
 </resources>

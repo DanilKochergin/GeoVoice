@@ -12,19 +12,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GeoVoice">
         <activity
-            android:name=".places.CongradulationsActivity"
+            android:name=".places.en.MainActivityEn"
             android:exported="false" />
         <activity
-            android:name=".places.ThirdPlaceActivity"
+            android:name=".places.bashkort.MainActivityBash"
             android:exported="false" />
         <activity
-            android:name=".places.SecondPlaceActivity"
+            android:name=".places.bashkort.ThirdPlaceBash"
             android:exported="false" />
         <activity
-            android:name=".places.FirstPlaceActivity"
+            android:name=".places.bashkort.SecondPlaceBash"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".places.bashkort.FirstPlaceBash"
+            android:exported="false" />
+        <activity
+            android:name=".places.en.ThirdPlaceEn"
+            android:exported="false" />
+        <activity
+            android:name=".places.en.SecondPlaceEn"
+            android:exported="false" />
+        <activity
+            android:name=".places.en.FirstPlaceEn"
+            android:exported="false" />
+        <activity
+            android:name=".CongradulationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".places.ru.ThirdPlaceActivityRu"
+            android:exported="false" />
+        <activity
+            android:name=".places.ru.SecondPlaceActivityRu"
+            android:exported="false" />
+        <activity
+            android:name=".places.ru.FirstPlaceActivityRu"
+            android:exported="false" />
+        <activity
+            android:name=".places.ru.MainActivityRu"
             android:exported="false" />
         <activity
             android:name=".HelloActivity"
