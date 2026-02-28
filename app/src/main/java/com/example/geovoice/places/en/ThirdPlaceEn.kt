@@ -30,6 +30,9 @@ class ThirdPlaceEn : AppCompatActivity() {
         }
         binding.ibRu.setOnClickListener {
             // TODO: после того как добавишь аудиогид, реализовать медиаплеер
+            if (mediaPlayer?.isPlaying == true){
+                return@setOnClickListener
+            }
             mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialsounden)
             mediaPlayer?.start()
         }

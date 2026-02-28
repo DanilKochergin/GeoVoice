@@ -32,6 +32,9 @@ class SecondPlaceEn : AppCompatActivity() {
             // TODO: после того как добавишь аудиогид, реализовать медиаплеер
             mediaPlayer = MediaPlayer.create(this, R.raw.salavulaevsounden)
             mediaPlayer?.start()
+            if (mediaPlayer?.isPlaying == true){
+                return@setOnClickListener
+            }
         }
     }
 }
