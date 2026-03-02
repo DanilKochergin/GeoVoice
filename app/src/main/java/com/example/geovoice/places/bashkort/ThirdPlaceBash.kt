@@ -1,6 +1,7 @@
 package com.example.geovoice.places.bashkort
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import com.example.geovoice.places.ru.MainActivityRu
 
 class ThirdPlaceBash : AppCompatActivity() {
     lateinit var binding: ActivityThirdPlaceBashBinding
+    private var mediaPlayer: MediaPlayer? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityThirdPlaceBashBinding.inflate(layoutInflater)
@@ -28,11 +30,12 @@ class ThirdPlaceBash : AppCompatActivity() {
         }
         binding.ibRu.setOnClickListener {
             // TODO: после того как добавишь аудиогид, реализовать медиаплеер
-            // mediaPlayer = MediaPlayer.create(this, R.raw.)
-            //mediaPlayer?.start()
-            //if (mediaPlayer?.isPlaying == true){
-            //                return@setOnClickListener
-            //            }
+            if (mediaPlayer?.isPlaying == true){
+                return@setOnClickListener
+            }
+            mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialbash)
+            mediaPlayer?.start()
+
         }
     }
 }
