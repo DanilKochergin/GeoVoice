@@ -30,12 +30,12 @@ class FirstPlaceEn : AppCompatActivity() {
             startActivity(intent)
         }
         binding.ib.setOnClickListener {
-            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
-            // mediaPlayer = MediaPlayer.create(this, R.raw.)
-            //mediaPlayer?.start()
             if (mediaPlayer?.isPlaying == true){
                 return@setOnClickListener
             }
+            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
+            mediaPlayer = MediaPlayer.create(this, R.raw.kateren)
+            mediaPlayer?.start()
         }
     }
 }
