@@ -29,12 +29,16 @@ class SecondPlaceEn : AppCompatActivity() {
             startActivity(intent)
         }
         binding.ib.setOnClickListener {
-            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
-            if (mediaPlayer?.isPlaying == true){
-                return@setOnClickListener
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(this, R.raw.salavulaevsounden)
             }
-            mediaPlayer = MediaPlayer.create(this, R.raw.salavulaevsounden)
-            mediaPlayer?.start()
+            if (mediaPlayer?.isPlaying == true){
+                mediaPlayer?.pause()
+                binding.ib.setImageResource(R.drawable.playbtn)
+            } else {
+                mediaPlayer?.start()
+                binding.ib.setImageResource(R.drawable.pausebtn)
+            }
         }
     }
 }

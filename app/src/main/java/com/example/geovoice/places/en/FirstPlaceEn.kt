@@ -30,12 +30,16 @@ class FirstPlaceEn : AppCompatActivity() {
             startActivity(intent)
         }
         binding.ib.setOnClickListener {
-            if (mediaPlayer?.isPlaying == true){
-                return@setOnClickListener
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(this, R.raw.kateren)
             }
-            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
-            mediaPlayer = MediaPlayer.create(this, R.raw.kateren)
-            mediaPlayer?.start()
+            if (mediaPlayer?.isPlaying == true){
+                mediaPlayer?.pause()
+                binding.ib.setImageResource(R.drawable.playbtn)
+            } else {
+                mediaPlayer?.start()
+                binding.ib.setImageResource(R.drawable.pausebtn)
+            }
         }
     }
 }

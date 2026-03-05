@@ -29,12 +29,16 @@ class ThirdPlaceActivityRu : AppCompatActivity() {
             startActivity(intent)
         }
         binding.ibRu.setOnClickListener {
-            if (mediaPlayer?.isPlaying == true){
-                return@setOnClickListener
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialru)
             }
-            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
-            mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialru)
-            mediaPlayer?.start()
+            if (mediaPlayer?.isPlaying == true){
+                mediaPlayer?.pause()
+                binding.ibRu.setImageResource(R.drawable.playbtn)
+            } else {
+                mediaPlayer?.start()
+                binding.ibRu.setImageResource(R.drawable.pausebtn)
+            }
         }
     }
 }
