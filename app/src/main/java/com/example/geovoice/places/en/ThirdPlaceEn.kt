@@ -28,13 +28,17 @@ class ThirdPlaceEn : AppCompatActivity() {
             val intent = Intent(this, MainActivityEn::class.java)
             startActivity(intent)
         }
-        binding.ibRu.setOnClickListener {
-            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
-            if (mediaPlayer?.isPlaying == true){
-                return@setOnClickListener
+        binding.ib.setOnClickListener {
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialsounden)
             }
-            mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialsounden)
-            mediaPlayer?.start()
+            if (mediaPlayer?.isPlaying == true){
+                mediaPlayer?.pause()
+                binding.ib.setImageResource(R.drawable.playbtn)
+            } else {
+                mediaPlayer?.start()
+                binding.ib.setImageResource(R.drawable.pausebtn)
+            }
         }
     }
 }

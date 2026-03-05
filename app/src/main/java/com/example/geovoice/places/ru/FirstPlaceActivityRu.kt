@@ -3,10 +3,12 @@ package com.example.geovoice.places.ru
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isInvisible
 import com.example.geovoice.places.ru.MainActivityRu
 import com.example.geovoice.R
 import com.example.geovoice.databinding.ActivityFirstPlaceRuBinding
@@ -29,13 +31,16 @@ class FirstPlaceActivityRu : AppCompatActivity() {
             startActivity(intent)
         }
         binding.ib.setOnClickListener {
-            if (mediaPlayer?.isPlaying == true){
-                return@setOnClickListener
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(this, R.raw.katerru)
             }
-            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
-             mediaPlayer = MediaPlayer.create(this, R.raw.katerru)
-            mediaPlayer?.start()
-
+            if (mediaPlayer?.isPlaying == true){
+                mediaPlayer?.pause()
+                binding.ib.setImageResource(R.drawable.playbtn)
+            } else {
+                mediaPlayer?.start()
+                binding.ib.setImageResource(R.drawable.pausebtn)
+            }
         }
     }
 }

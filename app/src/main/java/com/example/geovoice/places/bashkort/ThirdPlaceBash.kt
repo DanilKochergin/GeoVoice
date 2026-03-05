@@ -28,14 +28,17 @@ class ThirdPlaceBash : AppCompatActivity() {
             val intent = Intent(this, MainActivityBash::class.java)
             startActivity(intent)
         }
-        binding.ibRu.setOnClickListener {
-            // TODO: после того как добавишь аудиогид, реализовать медиаплеер
-            if (mediaPlayer?.isPlaying == true){
-                return@setOnClickListener
+        binding.ib.setOnClickListener {
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialbash)
             }
-            mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialbash)
-            mediaPlayer?.start()
-
+            if (mediaPlayer?.isPlaying == true){
+                mediaPlayer?.pause()
+                binding.ib.setImageResource(R.drawable.playbtn)
+            } else {
+                mediaPlayer?.start()
+                binding.ib.setImageResource(R.drawable.pausebtn)
+            }
         }
     }
 }
