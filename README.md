@@ -17,8 +17,7 @@
 
 **GeoVoice** is an Android application written in Kotlin that allows users to **listen to pre-uploaded audio guides based on location**.
 
-The app displays a list of available audio guides and lets users play them.  
-Each guide is associated with GPS coordinates, but audio is **only played**, not recorded.
+The app displays a list of available audio guides and lets users play them.
 
 ---
 
@@ -86,8 +85,7 @@ git clone https://github.com/DanilKochergin/GeoVoice.git
 
 **GeoVoice** — это Android-приложение, написанное на Kotlin, которое позволяет пользователям **прослушивать предварительно загруженные аудиогиды на основе их местоположения**.
 
-Приложение отображает список доступных аудиогидов и позволяет их воспроизводить.  
-Каждый гид привязан к GPS-координатам, однако аудио только **воспроизводится**, а не записывается.
+Приложение отображает список доступных аудиогидов и позволяет их воспроизводить.
 
 ---
 
