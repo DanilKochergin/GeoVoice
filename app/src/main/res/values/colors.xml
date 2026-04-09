@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <!-- Primary -->
-    <color name="salavat_green_dark">#15573A</color>
-
-    <!-- Secondary -->
-    <color name="salavat_blue">#4A90E2</color>
-
-    <!-- Accent -->
-    <color name="salavat_gold">#F2B705</color>
-
-    <!-- Neutrals -->
-    <color name="salavat_light_bg">#F5F5F5</color>
-
-    <!-- Dark -->
-    <color name="salavat_dark_surface">#1A1A1A</color>
+    <color name="linear_bg">#08090a</color> <color name="linear_text_primary">#f7f8f8</color> <color name="linear_text_secondary">#8a8f98</color> <color name="linear_accent">#5e6ad2</color> <color name="linear_border_subtle">#14FFFFFF</color> <color name="linear_surface_low">#05FFFFFF</color>
+    <color name="linear_border">#14FFFFFF</color>
+    <color name="linear_surface">#161c2e</color>
 </resources>

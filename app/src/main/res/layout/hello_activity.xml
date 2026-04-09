@@ -5,102 +5,115 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/linear_bg"
+    android:padding="32dp"
     tools:context=".HelloActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="@string/hellostr"
-        android:textColor="@color/salavat_light_bg"
-        android:textSize="30sp"
-        android:textStyle="bold"
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:alpha="0.3"
+        android:background="@drawable/bg_glow_gradient"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="190dp"
         app:layout_constraintBottom_toTopOf="@id/btnRu"
+        android:layout_marginBottom="250dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintTop_toTopOf="@id/headerGroup"
+        />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="331dp"
+    <LinearLayout
+        android:id="@+id/headerGroup"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Welcome to the Salavat audio guide"
-        android:textColor="@color/salavat_light_bg"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="331dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Салауат аудиогидына рәхим итегеҙ"
-        android:textColor="@color/salavat_light_bg"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:letterSpacing="-0.03"
+            android:lineSpacingMultiplier="1.0"
+            android:text="@string/hellostr"
+            android:textColor="@color/linear_text_primary"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:letterSpacing="-0.01"
+            android:text="Welcome to the Salavat audio guide"
+            android:textColor="@color/linear_text_primary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Салауат аудиогидына рәхим итегеҙ"
+            android:textColor="@color/linear_text_primary"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRu"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="@color/salavat_blue"
-        android:gravity="center"
-        android:text="@string/hellobtntext"
-        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/linear_accent"
+        android:fontFamily="sans-serif-medium"
+        android:text="Продолжить на Русском"
+        android:textAllCaps="false"
+        android:textColor="@color/linear_text_primary"
+        android:textSize="15sp"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btnEn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.218" />
+        app:strokeColor="@color/linear_border_subtle"
+        app:strokeWidth="2dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnEn"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="@color/salavat_blue"
-        android:gravity="center"
-        android:text="Сontinue in English"
-        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/linear_surface_low"
+        android:fontFamily="sans-serif-medium"
+        android:text="Continue in English"
+        android:textAllCaps="false"
+        android:textColor="@color/linear_text_primary"
+        android:textSize="15sp"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btnBash"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRu" />
+        app:strokeColor="@color/linear_border_subtle"
+        app:strokeWidth="2dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBash"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="@color/salavat_blue"
-        android:gravity="center"
-        android:text="@string/bash_continue"
-        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/linear_surface_low"
+        android:fontFamily="sans-serif-medium"
+        android:text="Дауамы Башҡортса"
+        android:textAllCaps="false"
+        android:textColor="@color/linear_text_primary"
+        android:textSize="15sp"
+        app:cornerRadius="8dp"
+        app:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEn"
-        app:layout_constraintVertical_bias="0.791" />
+        app:strokeColor="@color/linear_border_subtle"
+        app:strokeWidth="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

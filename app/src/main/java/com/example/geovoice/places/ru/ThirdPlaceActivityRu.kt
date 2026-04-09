@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.geovoice.places.ru.MainActivityRu
 import com.example.geovoice.R
 import com.example.geovoice.databinding.ActivityThirdPlaceRuBinding
 
@@ -28,16 +27,16 @@ class ThirdPlaceActivityRu : AppCompatActivity() {
             val intent = Intent(this, MainActivityRu::class.java)
             startActivity(intent)
         }
-        binding.ibRu.setOnClickListener {
+        binding.ib.setOnClickListener {
             if (mediaPlayer == null){
                 mediaPlayer = MediaPlayer.create(this, R.raw.fatherlandmemorialru)
             }
             if (mediaPlayer?.isPlaying == true){
                 mediaPlayer?.pause()
-                binding.ibRu.setImageResource(R.drawable.playbtn)
+                binding.ib.setImageResource(R.drawable.playbtn)
             } else {
                 mediaPlayer?.start()
-                binding.ibRu.setImageResource(R.drawable.pausebtn)
+                binding.ib.setImageResource(R.drawable.pausebtn)
             }
         }
     }
