@@ -5,62 +5,82 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".places.ru.FirstPlaceActivityRu"
-    android:background="@drawable/background">
+    android:background="@color/linear_bg"
+    android:padding="24dp"
+    tools:context=".places.ru.FirstPlaceActivityRu">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/backbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:text="⬅"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:backgroundTint="@color/salavat_green_dark"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/linear_accent"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        app:icon="@drawable/abc_ic_ab_back_material"
+        app:iconSize="24dp"
+        app:iconTint="@color/linear_text_primary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        app:strokeColor="@color/linear_accent"
+        app:strokeWidth="1dp" />
 
-    <ImageView
-        android:layout_width="195dp"
-        android:layout_height="318dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/otechimg"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imageCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        app:cardBackgroundColor="@color/linear_surface"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/linear_border"
+        app:strokeWidth="1dp"
+        app:layout_constraintDimensionRatio="3:4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backbtn" />
+        app:layout_constraintTop_toBottomOf="@+id/backbtn"
+        app:layout_constraintBottom_toTopOf="@+id/textView2">
 
-    <ImageButton
-        android:id="@+id/ibRu"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@null"
-        android:visibility="visible"
-        android:scaleType="centerInside"
-        android:src="@drawable/pausebtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="75dp"/>
+        <ImageView
+            android:id="@+id/placeImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otechimg" />
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif"
         android:gravity="center"
         android:text="@string/start_guide_ru"
-        android:textColor="@color/salavat_light_bg"
-        android:textSize="25sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/ibRu"
+        android:textColor="@color/linear_text_primary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ib"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
+    <ImageButton
+        android:id="@+id/ib"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/bg_player_button"
+        android:elevation="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/pausebtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
