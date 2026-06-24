@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Kotlin-1.9-blueviolet?logo=kotlin" />
   <img src="https://img.shields.io/badge/Platform-Android-green?logo=android" />
   <img src="https://img.shields.io/badge/Min%20SDK-21-orange" />
-  <img src="https://img.shields.io/badge/Status-Active%20Development-brightgreen" />
+  <img src="https://img.shields.io/badge/Status-Stop%20Development-brightgreen" />
 </p>
 
 ---
